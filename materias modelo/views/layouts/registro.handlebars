@@ -1,0 +1,92 @@
+ <a href="http://127.0.0.1:5500/index.html">
+        <img src="https://images.vexels.com/media/users/3/205565/isolated/preview/06e9efa04344b1363ec1eb57f393bf44-icone-de-cursor-do-site.png" class="logo">
+        </a>
+ <form class="formulario" action="/registroU" method="POST">
+        <div class="container">
+          <div class="container-login">
+            <div class="wrap-login">
+              <form class="login-form">
+                <span class="login-form-title">
+                  Registre-se
+                </span>
+    
+                <div class="wrap-input margin-top-35 margin-bottom-35">
+                   <form class="formulario" action="/registroU" method="POST"></form>
+                  <input class="input-form" type="text" name="email" autocomplete="off">
+                  <span class="focus-input-form" data-placeholder="E-mail"></span>
+                </div>
+      
+                <div class="wrap-input margin-bottom-35">
+                  <input class="input-form" type="password" name="senha" id="senha">
+                  <span class="focus-input-form" data-placeholder="Senha"></span>
+                </div>
+                <div class="wrap-input margin-bottom-35">
+                  <input class="input-form" type="password" name="password" id="senha2">
+                  <span class="focus-input-form" data-placeholder="Confirme a sua senha"></span>
+                </div>
+                <select id="selectRole" class="wrap-input margin-top-35 margin-bottom-35" name="tipoU">
+                    <option value="prof">Professor</option>
+                    <option value="estu">Estudante</option>
+                </select>
+
+                <div class="container-login-form-btn">
+                    <button class="login-form-btn" type="submit" onclick="validarDados()">
+                        Registrar
+                    </button>
+                </div>
+                </form>
+                <ul class="login-utils">
+                  <li class="margin-bottom-8 margin-top-8">
+                    <span class="text1">
+                      Já tem 
+                    </span>
+      
+                    <a href="http://localhost:8081/login" class="text2">
+                      conta?
+                    </a>
+                  </li>
+          
+            </div>
+          </div>
+        </div>
+        <script>
+          let inputs = document.getElementsByClassName('input-form');
+          for (let input of inputs) {
+            input.addEventListener("blur", function() {
+              if(input.value.trim() != ""){
+                input.classList.add("has-val");
+              } else {
+                input.classList.remove("has-val");
+              }
+            });
+          }
+
+            function validarSenha() {
+              var senha = document.getElementById("senha").value;
+              var senhaConfirmacao = document.getElementById("senha2").value;
+
+              // Verificar se as senhas são iguais
+              return senha === senhaConfirmacao;
+          }
+
+          function validarDados() {
+              var senhasSaoCompatíveis = validarSenha();
+
+              if (senhasSaoCompatíveis) {
+                  var selectElement = document.getElementById("selectRole");
+                  var selectedValue = selectElement.value;
+
+                  // Verificar o valor selecionado e exibir um alerta correspondente
+                  if (selectedValue === "prof") {
+                      alert("Cadastro solicitado, será enviado um email em 24 horas, por favor fique atento!");
+                  } else if (selectedValue === "estu") {
+                      alert("Registro realizado");
+                  }
+              } else {
+                  alert("As senhas não coincidem. Por favor, insira senhas iguais nos dois campos.");
+              }
+          }
+        
+        </script>
+  </script>
+</form>

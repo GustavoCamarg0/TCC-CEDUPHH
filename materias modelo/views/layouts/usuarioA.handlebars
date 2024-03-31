@@ -1,0 +1,38 @@
+<a href="http://127.0.0.1:5500/paginaAluno.html">
+        <img src="https://images.vexels.com/media/users/3/205565/isolated/preview/06e9efa04344b1363ec1eb57f393bf44-icone-de-cursor-do-site.png" class="logo">
+        </a>
+<section class="sectioUser">
+    <header class="headerUsuario">
+      </li>
+   <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/9292244-default-avatar-icon-vector-of-social-media-user-vetor.jpg" class="imgUser" />
+      </header>
+      <br>
+  <h1 class="h1Usuario" id="conteudo"></h1>
+  <br>
+  <div class="user">
+    <br>
+    <br><div id="h2L">
+    <h2 class="txt">Tipo do usuário: </h2> 
+    <h2 class="txt" id="uss"></h2>
+    </div> 
+    <br>
+    <br>
+  </div>
+  </section>
+  <script>
+  const email = document.cookie.split('; ').find(row => row.startsWith('usuarioEmail=')).split('=')[1];
+  const emailDecoded = decodeURIComponent(email);
+  document.getElementById("conteudo").textContent = emailDecoded;
+  const tipoU = document.cookie.split('; ').find(row => row.startsWith('tipoUsuario=')).split('=')[1];
+  const tipoUE = decodeURIComponent(tipoU);
+  document.getElementById("uss").textContent = tipoUE;
+</script>
+<style>
+  #h2L{
+  display: flex;
+  margin-right: 20px;
+  }
+  h2.txt{
+    margin-right: 7px;
+  }
+</style>

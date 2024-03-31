@@ -1,0 +1,17 @@
+<div>
+
+<div id="titulo"><h1>conteúdos: </h1></div>
+{{#each conteudo}}
+<div class="containerC">
+    <div class="tituloC">
+        <h1>{{materia}}</h1>
+    </div>
+    <div class="conteudo">
+        <h2>{{conteudo}}</h2>
+    </div>
+</div>
+    <br>
+<a href="/deletarC/{{id}}"><button class="btn btn-success">deletar</button></a>
+
+{{/each}}
+</div>

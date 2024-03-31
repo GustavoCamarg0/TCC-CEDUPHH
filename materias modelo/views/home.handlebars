@@ -1,0 +1,13 @@
+<div>
+
+<div id="titulo"><h1>Atividades: </h1></div>
+{{#each post}}
+<div class="materia">
+<h1>{{materia}}</h1>
+<iframe src="{{link}}" width="640" height="467" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+</div>
+    <br>
+<a href="/deletar/{{id}}"><button class="btn btn-success">deletar</button></a>
+
+{{/each}}
+</div>

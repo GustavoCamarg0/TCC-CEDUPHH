@@ -1,0 +1,69 @@
+<a href="http://127.0.0.1:5500/index.html">
+        <img src="https://images.vexels.com/media/users/3/205565/isolated/preview/06e9efa04344b1363ec1eb57f393bf44-icone-de-cursor-do-site.png" class="logo">
+        </a>
+<form class="formulario" action="/loginV" method="post">
+	<div class="container">
+		<div class="container-login">
+			<div class="wrap-login">
+				<form class="login-form">
+					<span class="login-form-title">
+						Faça o login
+					</span>
+
+					<div class="wrap-input margin-top-35 margin-bottom-35">
+						<input class="input-form" type="text" name="email" autocomplete="off">
+						<span class="focus-input-form" data-placeholder="E-mail"></span>
+					</div>
+
+					<div class="wrap-input margin-bottom-35">
+						<input class="input-form" type="password" name="password">
+						<span class="focus-input-form" data-placeholder="Senha"></span>
+					</div>
+
+					<div class="container-login-form-btn">
+						<button class="login-form-btn" type="submit" onclick="/loginV" >
+							Login
+						</button>
+					</div>
+
+					<ul class="login-utils">
+						<li class="margin-bottom-8 margin-top-8">
+							<span class="text1">
+								Esqueceu sua
+							</span>
+
+							<a href="#" class="text2">
+								senha?
+							</a>
+						</li>
+
+						<li>
+							<span class="text1">
+								Não tem conta?
+							</span>
+
+							<a href="http://localhost:8081/registro" class="text2">
+								Criar
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+		</div>
+	</div>
+	
+	<script>
+		let inputs = document.getElementsByClassName('input-form');
+		for (let input of inputs) {
+			input.addEventListener("blur", function() {
+				if(input.value.trim() != ""){
+					input.classList.add("has-val");
+				} else {
+					input.classList.remove("has-val");
+				}
+			});
+		}
+
+	</script>
+	</form>
